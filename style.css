@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+.carousel-item1{
+  filter: brightness(90%);
+  background-image: url('./images/banner1.png');
+  background-repeat: no-repeat;
+  height: 40rem;
+  
+}
+.carousel-item2{
+  filter: brightness(90%);
+  background-image: url('./images/banner2.png');
+  background-repeat: no-repeat;
+   width: auto;
+  height: 40rem;
+}
+.carousel-item3{
+  filter: brightness(90%);
+  background-image: url('./images/banner3.png');
+  background-repeat: no-repeat;
+   width: auto;
+  height: 40rem;
+}
+.carousel-item4{
+  filter: brightness(90%);
+  background-image: url('./images/banner4.png');
+  background-repeat: no-repeat;
+   width: auto;
+  height: 40rem;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furit-Brust</title>
+
+    <!-- fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Poppins:wght@200;400;600;700;800&family=Work+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwiend and Dasiyui link  -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind style edit link  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              nav: "#F85559",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <!-- css style sheet link  -->
+  <link rel="stylesheet" href="style.css" />
+
+  <body>
+    <header class="md:container md:mx-auto">
+      <!-- navbat style  -->
+      <nav class="p-5">
+        <div
+          class="navbar justify-around bg-base-100 bg-red-500 text-white rounded-full"
+        >
+          <div class="hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+          <div class="navbar-center">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li class="bg-slate-500"><a>Home</a></li>
+                <li class="bg-slate-500"><a>About Us</a></li>
+                <li class="bg-slate-500"><a>Shop</a></li>
+                <li class="bg-slate-500"><a>All Fruits</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+          </div>
+          <div
+            class="navbar-end input input-bordered rounded-full input-md w-full max-w-xs"
+          >
+            <input
+              type="text"
+              placeholder="Type here "
+              class="h-[90%] border-inherit pl-3 w-full max-w-xs"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 stroke-black h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+
+      <!-- cerasol style  -->
+
+      <div class="carousel ml-11 w-full">
+        <div id="slide1" class="carousel-item carousel-item1 relative w-full">
+          <!-- <img src="./images/banner1.png" class="w-full" /> -->
+          <div class="ml-96 mt-10">
+            <h1 class="text-7xl text-center text-white">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p class="text-xl text-center py-6 text-white">
+              We supply highly quality organic products
+            </p>
+            <!-- <button class="btn btn-outline bg-red-500 ml-72 text-white">
+              Shope Now
+            </button> -->
+            <button class="btn  btn-outline bg-red-500 ml-72 text-white" onclick="my_modal_1.showModal()">Shope Now</button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box ">
+                <img class="m-auto	h-64	" src="./images/fruit6.png" alt="">
+                <h3 class="font-bold  text-center text-6xl		">Apple</h3>
+                <p class="py-4 text-center">Professional employees are there for you to pick the most <br> amazing and fresh fruits.</p>
+                <div class="rating text-center mx-40	">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <div class="modal-action mx-28	">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                    <button class="btn btn-outline bg-red-500 ml-9	 text-white">Buy Now</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item carousel-item2 relative w-full">
+          <div class="ml-96 mt-10">
+            <h1 class="text-7xl text-center text-white">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p class="text-xl text-center py-6 text-white">
+              We supply highly quality organic products
+            </p>
+            <!-- <button class="btn btn-outline bg-red-500 ml-72 text-white">
+              Shope Now
+            </button> -->
+            <button class="btn  btn-outline bg-red-500 ml-72 text-white" onclick="my_modal_1.showModal()">Shope Now</button>
+            <dialog id="my_modal_2" class="modal">
+              <div class="modal-box ">
+                <img class="m-auto	h-64	" src="./images/fruit6.png" alt="">
+                <h3 class="font-bold  text-center text-6xl		">Apple</h3>
+                <p class="py-4 text-center">Professional employees are there for you to pick the most <br> amazing and fresh fruits.</p>
+                <div class="rating text-center mx-40	">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <div class="modal-action mx-28	">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                    <button class="btn btn-outline bg-red-500 ml-9	 text-white">Buy Now</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item carousel-item3 relative w-full">
+          <div class="ml-96 mt-10">
+            <h1 class="text-7xl text-center text-white">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p class="text-xl text-center py-6 text-white">
+              We supply highly quality organic products
+            </p>
+            <!-- <button class="btn btn-outline bg-red-500 ml-72 text-white">
+              Shope Now
+            </button> -->
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn  btn-outline bg-red-500 ml-72 text-white" onclick="my_modal_1.showModal()">Shope Now</button>
+            <dialog id="my_modal_3" class="modal">
+              <div class="modal-box ">
+                <img class="m-auto	h-64	" src="./images/fruit6.png" alt="">
+                <h3 class="font-bold  text-center text-6xl		">Apple</h3>
+                <p class="py-4 text-center">Professional employees are there for you to pick the most <br> amazing and fresh fruits.</p>
+                <div class="rating text-center mx-40	">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <div class="modal-action mx-28	">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                    <button class="btn btn-outline bg-red-500 ml-9	 text-white">Buy Now</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+            
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item carousel-item4 relative w-full">
+          <div class="ml-96 mt-10">
+            <h1 class="text-7xl text-center text-white">
+              Exotic tastes at your <br />
+              doorstep
+            </h1>
+            <p class="text-xl text-center py-6 text-white">
+              We supply highly quality organic products
+            </p>
+            <!-- <button class="btn btn-outline bg-red-500 ml-72 text-white">
+              Shope Now
+            </button> -->
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn  btn-outline bg-red-500 ml-72 text-white" onclick="my_modal_1.showModal()">Shope Now</button>
+            <dialog id="my_modal_4" class="modal">
+              <div class="modal-box ">
+                <img class="m-auto	h-64	" src="./images/fruit6.png" alt="">
+                <h3 class="font-bold  text-center text-6xl		">Apple</h3>
+                <p class="py-4 text-center">Professional employees are there for you to pick the most <br> amazing and fresh fruits.</p>
+                <div class="rating text-center mx-40	">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <div class="modal-action mx-28	">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                    <button class="btn btn-outline bg-red-500 ml-9	 text-white">Buy Now</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="md:container md:mx-auto"></main>
+  </body>
+</html>
