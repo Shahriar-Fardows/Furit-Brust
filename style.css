@@ -36,3 +36,12 @@
    width: auto;
   height: 40rem;
 }
+
+.section3{
+  /* filter: brightness(50%); */
+  background-image: url('./images/team.png');
+  background-repeat: no-repeat;
+   width: auto;
+  height: 44rem;
+  opacity: 0.9;
+}
